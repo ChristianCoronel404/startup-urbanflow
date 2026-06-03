@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanFlow MVP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <h1>UrbanFlow - Hackathon MVPs</h1>
+  <section>
+    <h2>1. Búsqueda de rutas multimodales</h2>
+    <label>Origen <input id="origin" value="Centro"></label>
+    <label>Destino <input id="dest" value="Aeropuerto"></label>
+    <button id="searchRoutes">Buscar rutas</button>
+    <div id="routes"></div>
+  </section>
+
+  <section>
+    <h2>2. Llegada de buses</h2>
+    <label>Parada <select id="stopId"><option value="stopA">stopA</option><option value="stopB">stopB</option><option value="stopC">stopC</option><option value="stopD">stopD</option></select></label>
+    <button id="checkArrival">Consultar llegada</button>
+    <div id="arrival"></div>
+  </section>
+
+  <section>
+    <h2>3. Pago de viaje</h2>
+    <label>ID de tarjeta <input id="cardId" value="card-1234"></label>
+    <label>Monto <input id="amount" type="number" value="10"></label>
+    <label>Modos <input id="modes" value="bus,scooter"></label>
+    <button id="payTrip">Pagar viaje</button>
+    <div id="paymentResult"></div>
+  </section>
+
+  <section>
+    <h2>4. Simular retraso de bus</h2>
+    <label>ID de bus <input id="busId" value="bus-1"></label>
+    <label>Retraso (segundos) <input id="delaySeconds" type="number" value="600"></label>
+    <button id="sendTraffic">Enviar prioridad</button>
+    <div id="trafficResult"></div>
+  </section>
+
+  <section>
+    <h2>5. Scooters disponibles</h2>
+    <button id="loadScooters">Cargar scooters</button>
+    <div id="scooterList"></div>
+  </section>
+
+  <section>
+    <h2>6. Congestión y re-enrutamiento</h2>
+    <button id="predictCongestion">Predecir congestión en 30 min</button>
+    <div id="congestionResult"></div>
+    <button id="rerouteBus">Re-enrutar bus automático</button>
+    <div id="rerouteResult"></div>
+  </section>
+
+  <section>
+    <h2>Auditoría</h2>
+    <button id="loadAudit">Cargar auditoría</button>
+    <div id="auditList"></div>
+  </section>
+
+  <section>
+    <h2>Notificaciones</h2>
+    <div id="notifications"></div>
+  </section>
+
+  <section>
+    <h2>Mapa simple</h2>
+    <div id="map"></div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
